@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jwt_customize
+    username: root
+    password: hao091101
+  jpa:
+    hibernate.ddl-auto: create
+    generate-ddl: true
+    show-sql: true
+server:
+  port: 8082
+  error:
+    include-message: always
+application:
+  security:
+    jwt:
+      secret-key: SGFvMjAyMlRydW5nSGFvMjAyMlRydW5nSGFvMjAyMlRydW5n
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
+
